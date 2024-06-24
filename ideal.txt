@@ -1,0 +1,23 @@
+
+install MPI
+sudo apt-get install libopenmpi-dev
+mpicc FINAL.c -o FINAL -lm
+
+
+g++ -fopenmp test.c -o openmp
+./openmp 100000 // N la so node
+
+gcc pthread.c -o pthread -pthread -lm
+
+
+chay thi nghiem tren bo 10^3 10^4 10^5 10^6
+cac thong so danh gia
+
+memory size
+time (time theo clock and theo mpi/openmp clock)
+speedup ratio = (sequential time - parralel time) * 100 / sequential execution time
+so sanh giua li thuyet vaf thuc te
+
+Trình bày về cách tính giá trị theori speedup
+
+Lieu co phai chay nhieu lafn ko ?
